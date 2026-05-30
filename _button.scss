@@ -1,0 +1,11 @@
+@mixin button-style($bg-color:transparent,$text-color:black){
+    border:solid 3px black;
+    cursor: pointer;
+    border-radius: 4rem;
+    height: 30px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}

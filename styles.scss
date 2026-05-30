@@ -1,0 +1,200 @@
+.scss_styling_here {
+  background-color: aqua;
+  color: brown;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#parent {
+  width: 100%;
+  display: flex; /*useful for parent divs to align flexible items*/
+  align-items: center; /*aligns items on y axis*/
+  justify-content: space-around; /*aligns items on x axis*/
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+
+#box1 {
+  background-color: black;
+  height: 100px;
+  width: 100px;
+  flex-shrink: 0;
+}
+#box2 {
+  background-color: red;
+  height: 100px;
+  width: 100px;
+  flex-shrink: 0;
+}
+#box3 {
+  background-color: green;
+  height: 100px;
+  width: 100px;
+  flex-shrink: 0;
+}
+
+/* NavBar Style */
+
+#navbar {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  background-color: gray;
+  font-weight: 600;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  /* need to tell where the navbar sticks */
+}
+
+/* card design */
+.card {
+  background-color: aqua;
+  width: 250px;
+  height: 250px;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+.top {
+  display: flex;
+  justify-content: center;
+}
+
+.bottom {
+  height: 40%;
+  width: 100%;
+  background: linear-gradient(transparent, black 220%);
+  position: absolute;
+  bottom: -40%;
+}
+
+.card:hover .bottom {
+  bottom: 0;
+  transition: all ease-in-out 0.5s;
+  transition: 2;
+}
+
+/* grid practice */
+/* basically to make custom gridf areas use grid area prop and draw as a matrix */
+
+.gridmap {
+  margin-top: 3rem;
+  height: 50rem;
+  width: 50rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "section1 section1  section2  section3"
+    "section4 section5 section6  section6";
+  gap: 10px;
+}
+
+.gridmap :nth-child(n) {
+  background-color: blanchedalmond;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: brown;
+  align-content: center;
+  text-align: center;
+}
+
+#section1 {
+  grid-area: section1;
+}
+#section2 {
+  grid-area: section2;
+}
+#section3 {
+  grid-area: section3;
+}
+#section4 {
+  grid-area: section4;
+}
+#section5 {
+  grid-area: section5;
+}
+#section6 {
+  grid-area: section6;
+}
+
+// actual scss code starts here
+
+// button scss
+@import "button";
+.button_1 {
+  @include button-style;
+}
+
+.button_1:hover {
+  border: solid 2px gray;
+  background-color: rgb(43, 43, 43);
+  color: white;
+}
+
+@mixin center-alignment() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// carousel styling
+
+.carousel {
+  width: 95 vw;
+  height: 50vh;
+  @include center-alignment();
+  section {
+    background-color: red;
+    height: 100%;
+    flex-grow: 1;
+    border: solid 2px gray;
+    background-position: center;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+  }
+  section:hover {
+    flex-grow: 3;
+    
+  }
+  section:nth-child(1) {
+    background-image: url(https://i.pinimg.com/736x/54/6a/a2/546aa2db4625eb82838a3b95d7e0beb9.jpg);
+    background-size: cover;
+  }
+  section:nth-child(2) {
+    background-image: url(https://i1-e.pinimg.com/1200x/1b/21/7a/1b217adc4323c07cd8bbc925186bcf36.jpg);
+    background-size: cover;
+  }
+  section:nth-child(3) {
+    background-image: url(https://i1-e.pinimg.com/1200x/59/fa/94/59fa942d38166c8e7253fd14c67b973c.jpg);
+    background-size: cover;
+  }
+  section:nth-child(4) {
+    background-image: url(https://i1-e.pinimg.com/736x/56/75/ef/5675ef0661c04b1b1a374b34fd7b4610.jpg);
+    background-size: cover;
+  }
+  section:nth-child(5) {
+    background-image: url(https://i.pinimg.com/736x/54/6a/a2/546aa2db4625eb82838a3b95d7e0beb9.jpg);
+    background-size: cover;
+  }
+  section:nth-child(6) {
+    background-image: url(https://i1-e.pinimg.com/1200x/20/c6/c9/20c6c9bb00c4708892d03153e217e24b.jpg);
+    background-size: cover;
+  }
+}
