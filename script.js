@@ -23,3 +23,25 @@
 // console.log(a); // undefined
 
 // var a = 10;
+
+
+// // Conditional Operators
+
+// // if(){}else{} - everyone and their mom knows this
+// // condtion ? true:false
+// 12>13?console.log(true):console.log(false)
+// // Switch Case - gives statement referred to that case if not resolves to default
+// switch("whatever number you would like"){
+//     case 1 :
+//         console.log("1")
+//         break;
+//     case 2 :
+//         console.log("2")
+//         break;
+//     case 3 :
+//         console.log("3");
+//         break;
+//     default:
+//         console.log("default");
+// }
+
