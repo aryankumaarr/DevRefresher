@@ -126,3 +126,39 @@
 //   }
 // }
 // NAN , deposis and other things not handled yet 
+
+
+// // IIFE imediately invoked function
+// (function(){
+// // used to create private variables that cant be accessed
+// })();
+
+// More Function Types in js - [Arrow, fat Arrow, Anonymous, Higher Order, Callback,
+//  First Class , Pure Function, Impure Function]
+// // Fat Arrow-
+// let abcd = ()=>{
+//     console.log("something")
+// }
+// // anonymous - no name 
+// function(){}
+// // Higher Order Function -> IF a functions returns a funtion or accepts a func as a param
+// function abcd(){
+//     return function(){
+
+//     }
+// }
+// function efgh(a){
+
+// }
+// efgh(function(){
+
+// });
+// // Callback - function that calls a fucntion
+// abcd(function(){
+
+// })
+// First Class Function -> functions can be used as variables 
+// Pure Funtions - same input same output 
+// Impure Funtions - same input different outputs each time
+
+// Closure - if the returning function of a hof uses a variable from the  parent
