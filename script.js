@@ -348,14 +348,41 @@
 
 // Create an array of names and use `some()` and `every()` to test a condition (e.g., all names longer than 3 characters).
 
-// ---
+// let names = ['Aryan','George','Jim','Dwight','Pam']
+
+// let isNameThreeCharsLong =  names.some(function(name){
+// return name.length === 3;
+// })
+// let areAllNamesThreeCharsLong =  names.every(function(name){
+// return name.length === 3;
+// })
+
+// console.log(isNameThreeCharsLong) //expected true
+// console.log(areAllNamesThreeCharsLong) //expected false
+
 
 // ## **8. Object.freeze() & Object.seal()**
 
 // Create an object `user` and test the behavior of `Object.freeze()` and `Object.seal()` by adding/changing keys.
 
-// ---
+// let user = {
+//     Name: "Aryan",
+//     Age: 20
+// }
+
+// Object.seal(user);//can change props but not add or del
+// Object.freeze(user);//cant change anything 
+
 
 // ## **9. Nested Object Access**
 
 // Create a nested object (`user → address → city`) and access the city name inside
+
+// let user = {
+//     name: 'Aryan',
+//     address: {
+//         city:'Clagary',
+//         province:'Alberta'
+//     }
+// }
+
