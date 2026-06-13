@@ -1,3 +1,10 @@
+
+var btn = document.querySelector('.button_1')
+btn.addEventListener('click',()=>{
+    window.open('/randomElemGen.html','_blank')
+})
+//just some code to access a diff page
+
 // let count = 5;
 // console.log(count);
 // console.log(count++)
