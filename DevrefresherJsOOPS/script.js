@@ -1,0 +1,48 @@
+// OOPS - Object Oriented Programming
+// Helps make code modular and scalable
+
+// FUNADAMENTALS //
+// class Class {
+//   //class name should always start with Capital letters
+//   constructor(name = "ClassName") {
+//     // first thing that runs in a class is a constructor , basically builds the blue print of an obj made out of
+//     // this class
+//     this.name = name;
+//   }
+// }
+
+// let someVariable = new Class(); //Has classname default as classname
+// let someVariableWithParamIntheClass = new Class("Aryan"); //Has classname default as Aryan
+
+// console.log(someVariable);
+// console.log(someVariableWithParamIntheClass);
+
+//PROTOTYPE//
+// Prototype is a blueprint object that stores all the methods and props for all instances of a class. Basically
+// a shared memory for all the instances instead of creating duplicate method for all different instances. Dont confuse
+// it with the constructor props which are different for all instances
+
+// SPecial note- this keyword follows parent values , in es6 function that is one level deep its window , es5 is parent
+// es6 2 levels or more deep is parent value
+
+// Call,Apply and Bind//
+// within a global fn the value of this is window , if u want to change that u use call apply and bind
+
+// let obj = {
+//   name: "Aryan",
+//   Age: 21,
+// };
+
+// function printSomething(a,b,c) {
+//   console.log(this,a,b,c);
+// }
+// printSomething();// vlaue is window
+
+// printSomething.call(obj,1,2,3); // value of this is now the Object obj
+// // structure of call is fn.call(theObjectUwantToSetAsThis, SetParams)
+// printSomething.apply(obj,[8,2,3])
+// // structure of apply is fn.call(theObjectUwantToSetAsThis, [SetParams in an Array])
+// let newPrintSomething = printSomething.bind(obj,5,2,3); //Bind doesnt run something but gives us a fucn instead to run
+// // structure of bind is same as apply just needs to be saved in a new var that will be run as a func
+
+// newPrintSomething();
