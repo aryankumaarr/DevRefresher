@@ -41,27 +41,27 @@
 
 // -- Making a random ELEM generator -- //
 
-var btn = document.querySelector("#genBtn");
+// var btn = document.querySelector("#genBtn");
 
-btn.addEventListener("click", () => {
-  var randomElement = document.createElement("div");
-  var body = document.querySelector("body");
-  console.log(randomElement);
-  var c1 = Math.floor(Math.random() * 1000);
-  var c2 = Math.floor(Math.random() * 1000);
-  var c3 = Math.floor(Math.random() * 1000);
-  var x = Math.ceil(Math.random() * 100);
-  var y = Math.ceil(Math.random() * 100);
-  var rotationAngle = Math.random()*360;
+// btn.addEventListener("click", () => {
+//   var randomElement = document.createElement("div");
+//   var body = document.querySelector("body");
+//   console.log(randomElement);
+//   var c1 = Math.floor(Math.random() * 1000);
+//   var c2 = Math.floor(Math.random() * 1000);
+//   var c3 = Math.floor(Math.random() * 1000);
+//   var x = Math.ceil(Math.random() * 100);
+//   var y = Math.ceil(Math.random() * 100);
+//   var rotationAngle = Math.random()*360;
 
-  randomElement.style.transform = `rotate(${rotationAngle}deg)`;
-  randomElement.style.height = "4rem";
-  randomElement.style.width = "6rem";
-  randomElement.style.backgroundColor = `rgb(${c1},${c2},${c3})`;
-  randomElement.style.position = "absolute";
-  randomElement.style.top = y + "%";
-  randomElement.style.left = x + "%";
-  body.appendChild(randomElement);
-});
+//   randomElement.style.transform = `rotate(${rotationAngle}deg)`;
+//   randomElement.style.height = "4rem";
+//   randomElement.style.width = "6rem";
+//   randomElement.style.backgroundColor = `rgb(${c1},${c2},${c3})`;
+//   randomElement.style.position = "absolute";
+//   randomElement.style.top = y + "%";
+//   randomElement.style.left = x + "%";
+//   body.appendChild(randomElement);
+// });
 
 
