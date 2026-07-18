@@ -18,8 +18,6 @@
 // console.log(someVariable);
 // console.log(someVariableWithParamIntheClass);
 
-
-
 // ANCHOR 🧬 PROTOTYPE
 
 //* Prototype is a blueprint object that stores all the methods and props for all instances of a class. Basically
@@ -28,9 +26,6 @@
 
 // NOTE - this keyword follows parent values , in es6 function that is one level deep its window , es5 is parent
 // NOTE - es6 2 levels or more deep is parent value
-
-
-
 
 // ANCHOR 🔄 CALL, APPLY AND BIND
 
@@ -58,9 +53,6 @@
 
 // newPrintSomething();
 
-
-
-
 // ANCHOR 🏗️ Class Expressions
 
 // * Definition
@@ -79,10 +71,28 @@
 //
 // are not hoisted like normal class declarations.
 
-
-
-
 // ANCHOR 👨‍👩‍👧 Inheritance
 
 //* Inheritance allows one class to inherit properties and methods
 //* from another class using the extends keyword.
+
+
+//NOTE - This is a base class that can be used to extend other classes
+class Animal {
+  constructor() {
+    this.limbs = 4,
+    this.mouth = 1,
+    this.type = 'mammal'
+  }
+  eat(){};
+  breathe(){};
+}
+
+class Spider extends Animal{
+constructor() {
+    this.limbs = 8,
+    this.mouth = 2,
+    this.type = 'insect'
+  }
+  spreadWeb(){};
+}
