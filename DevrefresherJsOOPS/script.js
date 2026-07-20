@@ -96,3 +96,31 @@ constructor() {
   }
   spreadWeb(){};
 }
+
+
+//ANCHOR - Getters and setters 
+
+//* Often used to access and modify private var
+
+// class Account{
+//   constructor(){
+//     this._balance = 0; //NOTE - private valuea always start with an underscore
+//   }
+
+//   get balance(){
+//     return this._balance
+//   }
+
+//   set balance(val){
+//     this._balance = val;
+//   }
+// }
+
+// let newAcc = new Account();
+// console.log(newAcc.balance);
+// newAcc.balance = 120000;
+// console.log(newAcc.balance);
+
+
+
+//!OOPS Practice Questions
