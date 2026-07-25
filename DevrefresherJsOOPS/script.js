@@ -264,38 +264,3 @@
 // print.apply(obj1,[1,2]);
 // let fn = print.bind(obj1,[1,3]);
 // fn();
-
-//ANCHOR 6: Callback Functions Practice Questions -
- 
-//TODO - Create a function AfterDelay Requirements -parameters time and a callback fn , prints callback executed after a certain time 
-//Answer - 
-// function AfterDelay(time , cb){
-// setTimeout(()=>{
-// cb();
-// },time)
-// }
-
-// AfterDelay(3000, ()=>{console.log("Callback exec")});
-
-//TODO - Create a function AfterDelay Requirements -parameters username and a callback after 1 sec , callback gets another
-//user post functions getUserPosts uses userID and cb as params and cb gives us an array of posts 
-//Answer - 
-function getUser(username,cb){
-  console.log("FETCHING USER DETAILS......")
-  setTimeout(()=>{
-    cb({id:1,username:'Aryan'});
-  },1000)
-  
-}
-
-function getUserPosts(userID,cb){
-  setTimeout(()=>{
-    cb(['hi','hello'])
-  },2000);
-}
-
-getUser('Aryan', function(data){
-  getUserPosts(data.id,function(allposts){
-    console.log(data.username,allposts);
-  })
-})
